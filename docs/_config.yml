@@ -25,7 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   The site contains the full code examples that were mentioned in the paper.
   It provides all tests that were conducted so they can be checked and retested.
   It explains certain new topics that where researched for the paper but ended up not fitting inside of the paper due to the ten page size limit.
-baseurl: "/AComparisonBetweenThreadsFibersAndCoroutines/docs/" # the subpath of your site, e.g. /blog
+baseurl: "/AComparisonBetweenThreadsFibersAndCoroutines" # the subpath of your site, e.g. /blog
 url: "https://sennebergmans.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  SenneBergmans
 
