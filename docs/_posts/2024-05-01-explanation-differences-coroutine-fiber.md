@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Explanation - Difference fibers and coroutines
+title: Explanation - Difference between fibers and coroutines
 date:   2024-05-01 10:00:00 +0200
 categories: explanation fibers coroutines
 permalink: "/explanation/fibers-coroutines-difference"
