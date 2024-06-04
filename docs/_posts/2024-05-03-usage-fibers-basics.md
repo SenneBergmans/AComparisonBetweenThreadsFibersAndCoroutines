@@ -285,8 +285,8 @@ The yield example shows that the order in which fibers are created matters becau
 Although unimportant in this small example, this creation order can impact the performance of a program, as will be explained in the context of the producer-consumer example on the next page.
 
 ### References
-[1] O. Kowalke. "Boost C++ Libraries Fiber." boost.org. Accessed: Feb. 13, 2024. [Online.] Available: [https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/index.html](https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/index.html)
+[1] O. Kowalke. "Boost C++ Libraries Fiber." boost.org. Accessed: May 13, 2024. [Online.] Available: [https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/index.html](https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/index.html)
 
 [2] Zitrax and H. Passant. "Answer to warning C4003: not enough actual parameters for macro 'max' - Visual Studio 2010 C++." stackoverflow.com. Accessed: Mar. 1, 2024. [Online.] Available: [https://stackoverflow.com/a/6884251](https://stackoverflow.com/a/6884251)
 
-[3] O. Kowalke. "Boost C++ Libraries Fiber Scheduling." boost.org. Accessed: Feb. 13, 2024. [Online.] Available: [https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/fiber/scheduling.html](https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/fiber/scheduling.html)
+[3] O. Kowalke. "Boost C++ Libraries Fiber Scheduling." boost.org. Accessed: May 13, 2024. [Online.] Available: [https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/fiber/scheduling.html](https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/fiber/scheduling.html)

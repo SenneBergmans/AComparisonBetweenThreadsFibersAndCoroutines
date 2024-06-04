@@ -232,9 +232,8 @@ int main() {
 By alternating the creation of producers and consumers, their order in the scheduler is better, and every producer and consumer can do work when it is called.
 
 ### References
-[1] O. Kowalke. "Chapter 1. Fiber." boost.org. Accessed: Feb. 13, 2024. [Online.] Available: [https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/index.html](https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/index.html)
+[1] O. Kowalke. "Boost C++ Libraries Fiber." boost.org. Accessed: May 13, 2024. [Online.] Available: [https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/index.html](https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/index.html)
 
 [2] Zitrax and H. Passant. "Answer to warning C4003: not enough actual parameters for macro 'max' - Visual Studio 2010 C++." stackoverflow.com. Accessed: Mar. 1, 2024. [Online.] Available: [https://stackoverflow.com/a/6884251](https://stackoverflow.com/a/6884251)
 
-[3] O. Kowalke. "Chapter 1. Fiber - Scheduling." boost.org. Accessed: Feb. 13, 2024. [Online.] Available:
-[https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/fiber/scheduling.html](https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/fiber/scheduling.html)
+[3] O. Kowalke. "Boost C++ Libraries Fiber Scheduling." boost.org. Accessed: May 13, 2024. [Online.] Available: [https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/fiber/scheduling.html](https://www.boost.org/doc/libs/1_85_0/libs/fiber/doc/html/fiber/scheduling.html)
