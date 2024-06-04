@@ -2,8 +2,8 @@
 layout: post
 title:  "Usage - Stackful Coroutines - Producer-consumer"
 date:   2024-05-04 11:00:00 +0200
-categories: bachelor_thesis usage coroutines stackfull_coroutines producer-consumer
-permalink: "/bachelor_thesis/usage/coroutines/stackful/producer-consumer"
+categories:  usage coroutines stackfull_coroutines producer-consumer
+permalink: "/usage/coroutines/stackful/producer-consumer"
 ---
 This page will work out the same producer-consumer example as the threads and fibers producer-consumer pages.
 The code from the fiber page will be used as a starting point, and the code will be changed to use the Boost Coroutine2 library [1].
