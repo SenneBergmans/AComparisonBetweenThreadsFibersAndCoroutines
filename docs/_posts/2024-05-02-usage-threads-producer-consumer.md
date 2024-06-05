@@ -26,6 +26,10 @@ If this is the case, it will consume those numbers.
 The consumer repeats these actions until the consumer finishes.
 
 {% highlight c++ %}
+#include <iostream>
+#include <vector>
+#include <boost/thread.hpp>
+
 void producerFunction(std::vector<int>* numberVector, boost::mutex* threadMutex) {
     int counter = 0;
     int maxVectorSize = 5;
