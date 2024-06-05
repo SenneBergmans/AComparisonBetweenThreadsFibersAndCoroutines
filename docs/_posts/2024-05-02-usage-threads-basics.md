@@ -16,6 +16,7 @@ This usage of a class is done because the creation of threads works differently 
 When the function the thread should run is not part of any class, the same code as the example for static functions can be used.
 The class is defined as follows in the header file: 
 {% highlight c++ %}
+#include <string>
 class ThreadsBasics
 {
 public:
@@ -26,8 +27,8 @@ public:
 private:
     static void staticFunction();
     void memberFunction();
-    static void parameterFunction();
-}
+    static void parameterFunction(std::string firstString, std::string secondString);
+};
 {% endhighlight %}
 
 When a thread is created, it will have the type boost::thread.
@@ -38,6 +39,7 @@ The external scheduler used by threads will handle calling the thread.
 The only action the programmer needs to take is to join the thread.
 Joining a thread will pause the current function until the thread has finished running.
 The following code example creates a thread and joins it to ensure it finishes running.
+Please note that threads do not work deterministically, so the provided output can differ based on the order in which the threads are executed.
 {% highlight c++ %}
 #include "ThreadsBasics.h"
 #include <iostream>
@@ -48,7 +50,7 @@ void ThreadsBasics::staticExample() {
 
     std::cout << "staticExample: started creating a new thread" << std::endl;
     boost::thread myThread = boost::thread(staticFunction);
-    //boost::thread myThread(exampleFunction);
+    //boost::thread myThread(staticFunction);
     std::cout << "staticExample: finished creating a new thread" << std::endl;
 
     std::cout << "staticExample: started waiting for myThread to join" << std::endl;
@@ -127,22 +129,22 @@ Any parameters the function the thread will run should require can be added afte
 void ThreadsBasics::parameterExample() {
 	std::cout << "parameterExample: started running" << std::endl;
 
-    std::cout << "parameterExample: started creating a new thread" << std::endl;
-	boost::thread parameterThread(exampleFunction, "String 1", "String 2");
+	std::cout << "parameterExample: started creating a new thread" << std::endl;
+	boost::thread parameterThread(parameterFunction, "String 1", "String 2");
 	std::cout << "parameterExample: finished creating a new thread" << std::endl;
 
-	std::cout << "parameterExample: started waiting for parameterThread to join" << std::endl;
+	std::cout << "parameterExample: started waiting for parameterThread to join " << std::endl;
 	parameterThread.join();
 	std::cout << "parameterExample: finished waiting for parameterThread to join" << std::endl;
 
-    std::cout << "parameterExample: finished running" << std::endl;
+	std::cout << "parameterExample: finished running" << std::endl;
 }
 
 void ThreadsBasics::parameterFunction(std::string firstString, std::string secondString) {
-    std::cout << "parameterFunction: started running" << std::endl;
+	std::cout << "parameterFunction: started running" << std::endl;
 	std::cout << "parameterFunction: the first string is " << firstString << std::endl;
 	std::cout << "parameterFunction: the second string is " << secondString << std::endl;
-	std::cout << "parameterFunction: finished running" << std::endl;	
+	std::cout << "parameterFunction: finished running" << std::endl;
 }
 
 // --- Output ---
