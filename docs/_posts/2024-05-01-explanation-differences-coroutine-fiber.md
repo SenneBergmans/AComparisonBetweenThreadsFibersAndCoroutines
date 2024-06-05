@@ -40,22 +40,24 @@ Recreating the join functionality can be done in the following way:
 //The two test functions do the same thing. When called, they print the number that was provided and yield.
 //When called again at a later time, they resume and print their number again and then complete.
 void fiberFunction(int number) {
-    std::cout << number << std::endl;
+    std::cout << number << " ";
     boost::this_fiber::yield();
-    std::cout << number << std::endl;
+    std::cout << number << " ";
 }
 
 //The added pull_type parameter is used by the coroutine to yield.
 //This parameter does not affect the inner workings of the function.
 void coroutineFunction(boost::coroutines2::coroutine<void>::pull_type& yield, int number) {
-    std::cout << number << std::endl;
+    std::cout << number << " ";
     yield();
-    std::cout << number << std::endl;
+    std::cout << number << " ";
 }
 
 void fiberJoin() {
+    std::cout << "FiberJoin: ";
     boost::fibers::fiber fiber1(fiberFunction, 1);
     fiber1.join();
+    std::cout << std::endl;
 }
 
 void coroutineJoin() {
@@ -204,7 +206,7 @@ int main() {
 }
 // --- Output ---  
 // MainFiber: main sub
-// MainCoroutine : sub main
+// MainCoroutine: sub main
 // --- Output ---
 {% endhighlight %}
 

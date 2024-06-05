@@ -16,6 +16,8 @@ This usage of a class is done because the creation of fibers works differently f
 When the function the fiber should run is not part of any class, the same code as the example for static functions can be used.
 The class is defined as follows in the header file:
 {% highlight c++ %}
+#include <iostream>
+
 class FibersBasics
 {
 public:
@@ -28,10 +30,10 @@ public:
 private:
     static void staticFunction();
     void memberFunction();
-    static void parameterFunction();
-    static void noYieldFunction();
-    static void yieldFunction();
-}
+    static void parameterFunction(std::string firstString, std::string secondString);
+    static void noYieldFunction(int number);
+    static void yieldFunction(int number);
+};
 {% endhighlight %}
 When a fiber is created, it will have the type boost::fibers::fiber.
 A fiber can be created using boost:fibers::fiber(functionName), creating a fiber that executes the function named functionName.
@@ -54,7 +56,7 @@ void FibersBasics::staticExample() {
 
     std::cout << "staticExample: started creating a new fiber" << std::endl;
     boost::fibers::fiber myFiber = boost::fibers::fiber(staticFunction);
-    //boost::fibers::fiber myFiber(exampleFunction);
+    //boost::fibers::fiber myFiber(staticFunction);
     std::cout << "staticExample: finished creating a new fiber" << std::endl;
 
     std::cout << "staticExample: started waiting for myFiber to join" << std::endl;
@@ -188,9 +190,9 @@ void FibersBasics::noYieldExample() {
     std::cout << "noYieldExample: started running" << std::endl;
 
     std::cout << "noYieldExample: started creating three fibers" << std::endl;
-    boost::fibers::fiber fiber1 = boost::fibers::fiber(noYieldFunction);
-    boost::fibers::fiber fiber2 = boost::fibers::fiber(noYieldFunction);
-    boost::fibers::fiber fiber3 = boost::fibers::fiber(noYieldFunction);
+    boost::fibers::fiber fiber1 = boost::fibers::fiber(noYieldFunction, 1);
+    boost::fibers::fiber fiber2 = boost::fibers::fiber(noYieldFunction, 2);
+    boost::fibers::fiber fiber3 = boost::fibers::fiber(noYieldFunction, 3);
     std::cout << "noYieldExample: finished creating three fibers" << std::endl;
 
     std::cout << "noYieldExample: started waiting for fiber1 to join" << std::endl;
@@ -257,24 +259,26 @@ void FibersBasics::yieldFunction(int number) {
 // noYieldExample: started waiting for fiber3 to join
 // noYieldExample: finished waiting for fiber3 to join
 // noYieldExample: finished running
-//
+// 
 // yieldExample: started running
 // yieldExample: started creating three fibers
 // yieldExample: finished creating three fibers
 // yieldExample: started waiting for fiber1 to join
-// yieldFunction: 1
-// yieldFunction: 2
-// yieldFunction: 3
-// yieldFunction: 1
+// noYieldFunction: 1
+// noYieldFunction: 1
 // yieldFunction: 2
 // yieldFunction: 3
 // yieldExample: finished waiting for fiber1 to join
 // yieldExample: started waiting for fiber2 to join
+// yieldFunction: 2
+// yieldFunction: 3
 // yieldExample: finished waiting for fiber2 to join
 // yieldExample: started waiting for fiber3 to join
 // yieldExample: finished waiting for fiber3 to join
 // yieldExample: finished running
+// --- Output ---
 {% endhighlight %}
+
 The default scheduler of Boost fibers uses the round-robin method to pick its next fiber [3].
 When choosing fibers, a first in, first out queue is used.
 The main function can also be seen as part of this queue.

@@ -39,7 +39,7 @@ The code will thus be changed as follows:
 
 void producerFunction(std::vector<int>* numberVector, int producedConsumedAmount, int index) {
     int counter = 0;
-    int maxVectorSize = 5;
+    int maxVectorSize = 2;
 
     while (counter < producedConsumedAmount) {
         if (numberVector->size() < maxVectorSize) {

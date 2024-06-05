@@ -20,6 +20,7 @@ These changes will result in the following code.
 {% highlight c++ %}
 #include <boost/coroutine2/all.hpp>
 #include <iostream>
+#include <vector>
 
 void producerFunction(boost::coroutines2::coroutine<void>::pull_type& yield, std::vector<int>* numberVector, int producedConsumedAmount, int index) {
     int counter = 0;
