@@ -50,7 +50,7 @@ void MergesortFibers::mergesortFiberFunction(std::vector<int>* sortedVector, int
 }
 {% endhighlight %}
 
-Because this test benefits from parallelism, another version was made for all technologies that do not use parallelism alone.
+Because this test benefits from parallelism, another version was made for all technologies that do not use parallelism.
 This version will first create a predefined number of threads and split the work over these threads.
 These threads will then call the same mergesortFiberFunction to finish their portion of the work using fibers.
 This new version uses the following code:
@@ -105,3 +105,5 @@ void MergesortFibers::mergesortThreadFunction(int* threadCount, int maxThreadCou
 	MergesortHelper::combineSortedVectors(sortedVector, &leftSorted, &rightSorted);
 }
 {% endhighlight %}
+
+The complete test code used can be found in [this GitHub repository](https://github.com/SenneBergmans/AComparisonBetweenThreadsFibersAndCoroutines).

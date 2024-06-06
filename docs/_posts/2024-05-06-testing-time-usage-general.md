@@ -35,4 +35,4 @@ Every test category uses some parameters specific to that category to compare th
 In addition to that, the GlobalTestParameter class defines parameters used by all tests. In this implementation, the only global parameter is the sample size, which defines the number of times each test is repeated.
 
 The test pages will discuss the parameters specific to each of the tests and the test results from the research. 
-The complete test code can be found on the GitHub page linked to these GitHub pages.
+The complete test code can be found in [this GitHub repository](https://github.com/SenneBergmans/AComparisonBetweenThreadsFibersAndCoroutines).
