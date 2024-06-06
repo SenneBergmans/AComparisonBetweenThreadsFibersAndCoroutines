@@ -12,6 +12,12 @@ The goal was to make an empty fiber and coroutine function to ensure that the me
 Using the heap profiling tool that is part of Visual Studio Community 2022, the memory usage of the technologies was then measured at ten different breakpoints.
 The usage is measured on different breakpoints to visualize the moment memory is allocated and deallocated.
 The test shows, for example, that Boost fibers will deallocate their memory when they are joined, while coroutines will only deallocate their memory when they are destroyed because their function goes out of scope.
+The tests are conducted using Visual Studio in Debug mode.
+Testing using debug mode during the research measured slightly increased memory usage compared to testing in release mode.
+Release mode optimizations to the code were applied, which made it more efficient, but it removed the ability to measure each breakpoint for some but not all technologies.
+Testing memory allocations with all possible technology-specific optimizations added in release mode might be an interesting topic for further research.
+As stated, the research mentioned in the paper only contains results captured using debug mode.
+The complete code used can be found in [this GitHub repository](https://github.com/SenneBergmans/AComparisonBetweenThreadsFibersAndCoroutines).
 
 {% highlight C++%}
 void FibersMemoryUsage::emptyMemoryUsage() {
@@ -38,11 +44,16 @@ void FibersMemoryUsage::emptyMemoryUsage() {
 }
 {% endhighlight%}
 
-In addition to the empty functions, additional examples were made containing, for example, parameters.
+In addition to the empty functions, additional examples were made containing parameters.
 Additional parameters were added to see if adding parameters or variables to the fibers or coroutines would further increase dynamic memory usage.
 
-Additional research was also done on removing any dynamic memory usage for stackless coroutines. References [1], [2], and [3] show methods like compiler optimizations that can remove dynamic memory usage in special cases.
+Additional research was also done on removing any dynamic memory usage for stackless coroutines.
+The theoretical explanations are mentioned in the paper.
+However, this topic will not be covered further on this page because only the theory behind removing dynamic memory usage was researched.
 
+Readers interested in this topic might find [1], [2], and [3] worth reading as these were the sources used for the theoretical explanation in the paper, and they cover the topic in more depth.
+
+### References
 [1] G. Nishanov, "Using Coroutine TS with zero dynamic allocations," ISO/IEC JTC1/SC22/WG21, Tech. Rep. P1365R0, November 2018. [Online]. Available: [https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1365r0.pdf](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1365r0.pdf)
 
 [2] R. Smith and G. Nishanov, "Halo: coroutine Heap Allocation eLision Optimization: the joint response," ISO/IEC JTC1/SC22/WG21, Tech. Rep. P0981R0, March 2018. [Online]. Available: [https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0981r0.html](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0981r0.html)
