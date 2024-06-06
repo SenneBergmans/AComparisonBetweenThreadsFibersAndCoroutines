@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{e676d8b9-0826-4ded-8e3c-c2165591797c}</ProjectGuid>
+    <RootNamespace>TimeUsageTesting</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheet.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheet.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BoostCoroutineHelper.cpp" />
+    <ClCompile Include="ContextSwitchBaseTest.cpp" />
+    <ClCompile Include="ContextSwitchBoostCoroutines.cpp" />
+    <ClCompile Include="ContextSwitchParameters.cpp" />
+    <ClCompile Include="ContextSwitchTest.cpp" />
+    <ClCompile Include="GlobalTestParameters.cpp" />
+    <ClCompile Include="MergesortBaseTest.cpp" />
+    <ClCompile Include="MergesortBoostCoroutines.cpp" />
+    <ClCompile Include="ProducerConsumerBaseTest.cpp" />
+    <ClCompile Include="ProducerConsumerBoostCoroutines.cpp" />
+    <ClCompile Include="CoroutineTSHelper.cpp" />
+    <ClCompile Include="ContextSwitchFibers.cpp" />
+    <ClCompile Include="MergesortFibers.cpp" />
+    <ClCompile Include="MergesortCoroutinesTS.cpp" />
+    <ClCompile Include="MergesortFunctions.cpp" />
+    <ClCompile Include="MergesortParameters.cpp" />
+    <ClCompile Include="MergesortTest.cpp" />
+    <ClCompile Include="ProducerConsumerFibers.cpp" />
+    <ClCompile Include="MergesortFileReader.cpp" />
+    <ClCompile Include="CoroutineHandler.cpp" />
+    <ClCompile Include="FileWriter.cpp" />
+    <ClCompile Include="MergesortFileWriter.cpp" />
+    <ClCompile Include="MergesortHelper.cpp" />
+    <ClCompile Include="ContextSwitchCoroutinesTS.cpp" />
+    <ClCompile Include="ProducerConsumerParameters.cpp" />
+    <ClCompile Include="ProducerConsumerTest.cpp" />
+    <ClCompile Include="ProducerConsumerCoroutinesTS.cpp" />
+    <ClCompile Include="ContextSwitchThreads.cpp" />
+    <ClCompile Include="MergesortThreads.cpp" />
+    <ClCompile Include="ProducerConsumerThreads.cpp" />
+    <ClCompile Include="TimeUsage.cpp" />
+    <ClCompile Include="TimeUsageTesting.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BoostCoroutineHelper.h" />
+    <ClInclude Include="ContextSwitchBaseTest.h" />
+    <ClInclude Include="ContextSwitchBoostCoroutines.h" />
+    <ClInclude Include="ContextSwitchParameters.h" />
+    <ClInclude Include="ContextSwitchTest.h" />
+    <ClInclude Include="GlobalTestParameters.h" />
+    <ClInclude Include="MergesortBaseTest.h" />
+    <ClInclude Include="MergesortBoostCoroutines.h" />
+    <ClInclude Include="ProducerConsumerBaseTest.h" />
+    <ClInclude Include="ProducerConsumerBoostCoroutine.h" />
+    <ClInclude Include="CoroutineTSHelper.h" />
+    <ClInclude Include="ContextSwitchFibers.h" />
+    <ClInclude Include="MergesortFibers.h" />
+    <ClInclude Include="MergesortCoroutinesTS.h" />
+    <ClInclude Include="MergesortFunctions.h" />
+    <ClInclude Include="MergesortParameters.h" />
+    <ClInclude Include="MergesortTest.h" />
+    <ClInclude Include="ProducerConsumerFibers.h" />
+    <ClInclude Include="MergesortFileReader.h" />
+    <ClInclude Include="CoroutineHandler.h" />
+    <ClInclude Include="FileWriter.h" />
+    <ClInclude Include="MergesortFileWriter.h" />
+    <ClInclude Include="MergesortHelper.h" />
+    <ClInclude Include="ContextSwitchCoroutinesTS.h" />
+    <ClInclude Include="ProducerConsumerParameters.h" />
+    <ClInclude Include="ProducerConsumerTest.h" />
+    <ClInclude Include="ProducerConsumerCoroutinesTS.h" />
+    <ClInclude Include="ContextSwitchThreads.h" />
+    <ClInclude Include="MergesortThreads.h" />
+    <ClInclude Include="ProducerConsumerThreads.h" />
+    <ClInclude Include="TimeUsage.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

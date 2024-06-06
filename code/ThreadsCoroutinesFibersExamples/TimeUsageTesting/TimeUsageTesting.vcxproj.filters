@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\ProducerConsumer">
+      <UniqueIdentifier>{bde33ac9-cb9e-4347-bb24-9aa37b48641b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ContextSwitch">
+      <UniqueIdentifier>{8173b6b6-18fc-4ea2-94b1-4a61a6dba9a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Mergesort">
+      <UniqueIdentifier>{ee43ef66-1cbc-4a55-8f48-94e368aae570}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ContextSwitch">
+      <UniqueIdentifier>{9dd7c4c9-423b-4d9e-89cf-0adc63d99147}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Mergesort">
+      <UniqueIdentifier>{f4c92370-e344-4802-8593-0171df01eba7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ProducerConsumer">
+      <UniqueIdentifier>{4a1629a1-f3a4-41eb-88b3-aaa2e925d39b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\HelperFunctions">
+      <UniqueIdentifier>{a67088bb-7a39-4ee0-bfa7-0df32190959f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\HelperFunctions">
+      <UniqueIdentifier>{5222f4a3-b3a2-4426-a90b-f65f3b0e3147}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="TimeUsageTesting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileWriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeUsage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ContextSwitchFibers.cpp">
+      <Filter>Source Files\ContextSwitch</Filter>
+    </ClCompile>
+    <ClCompile Include="ProducerConsumerFibers.cpp">
+      <Filter>Source Files\ProducerConsumer</Filter>
+    </ClCompile>
+    <ClCompile Include="ContextSwitchBoostCoroutines.cpp">
+      <Filter>Source Files\ContextSwitch</Filter>
+    </ClCompile>
+    <ClCompile Include="ProducerConsumerBoostCoroutines.cpp">
+      <Filter>Source Files\ProducerConsumer</Filter>
+    </ClCompile>
+    <ClCompile Include="ContextSwitchCoroutinesTS.cpp">
+      <Filter>Source Files\ContextSwitch</Filter>
+    </ClCompile>
+    <ClCompile Include="ProducerConsumerCoroutinesTS.cpp">
+      <Filter>Source Files\ProducerConsumer</Filter>
+    </ClCompile>
+    <ClCompile Include="ProducerConsumerThreads.cpp">
+      <Filter>Source Files\ProducerConsumer</Filter>
+    </ClCompile>
+    <ClCompile Include="ContextSwitchThreads.cpp">
+      <Filter>Source Files\ContextSwitch</Filter>
+    </ClCompile>
+    <ClCompile Include="MergesortFibers.cpp">
+      <Filter>Source Files\Mergesort</Filter>
+    </ClCompile>
+    <ClCompile Include="MergesortFileWriter.cpp">
+      <Filter>Source Files\Mergesort</Filter>
+    </ClCompile>
+    <ClCompile Include="MergesortFileReader.cpp">
+      <Filter>Source Files\Mergesort</Filter>
+    </ClCompile>
+    <ClCompile Include="MergesortHelper.cpp">
+      <Filter>Source Files\Mergesort</Filter>
+    </ClCompile>
+    <ClCompile Include="MergesortBoostCoroutines.cpp">
+      <Filter>Source Files\Mergesort</Filter>
+    </ClCompile>
+    <ClCompile Include="MergesortThreads.cpp">
+      <Filter>Source Files\Mergesort</Filter>
+    </ClCompile>
+    <ClCompile Include="BoostCoroutineHelper.cpp">
+      <Filter>Source Files\HelperFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CoroutineHandler.cpp">
+      <Filter>Source Files\HelperFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="CoroutineTSHelper.cpp">
+      <Filter>Source Files\HelperFunctions</Filter>
+    </ClCompile>
+    <ClCompile Include="MergesortCoroutinesTS.cpp">
+      <Filter>Source Files\Mergesort</Filter>
+    </ClCompile>
+    <ClCompile Include="MergesortParameters.cpp">
+      <Filter>Source Files\Mergesort</Filter>
+    </ClCompile>
+    <ClCompile Include="MergesortTest.cpp">
+      <Filter>Source Files\Mergesort</Filter>
+    </ClCompile>
+    <ClCompile Include="MergesortFunctions.cpp">
+      <Filter>Source Files\Mergesort</Filter>
+    </ClCompile>
+    <ClCompile Include="ContextSwitchParameters.cpp">
+      <Filter>Source Files\ContextSwitch</Filter>
+    </ClCompile>
+    <ClCompile Include="ContextSwitchTest.cpp">
+      <Filter>Source Files\ContextSwitch</Filter>
+    </ClCompile>
+    <ClCompile Include="ProducerConsumerTest.cpp">
+      <Filter>Source Files\ProducerConsumer</Filter>
+    </ClCompile>
+    <ClCompile Include="ProducerConsumerParameters.cpp">
+      <Filter>Source Files\ProducerConsumer</Filter>
+    </ClCompile>
+    <ClCompile Include="ProducerConsumerBaseTest.cpp">
+      <Filter>Source Files\ProducerConsumer</Filter>
+    </ClCompile>
+    <ClCompile Include="MergesortBaseTest.cpp">
+      <Filter>Source Files\Mergesort</Filter>
+    </ClCompile>
+    <ClCompile Include="ContextSwitchBaseTest.cpp">
+      <Filter>Source Files\ContextSwitch</Filter>
+    </ClCompile>
+    <ClCompile Include="GlobalTestParameters.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="FileWriter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeUsage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ContextSwitchFibers.h">
+      <Filter>Header Files\ContextSwitch</Filter>
+    </ClInclude>
+    <ClInclude Include="ProducerConsumerFibers.h">
+      <Filter>Header Files\ProducerConsumer</Filter>
+    </ClInclude>
+    <ClInclude Include="ContextSwitchBoostCoroutines.h">
+      <Filter>Header Files\ContextSwitch</Filter>
+    </ClInclude>
+    <ClInclude Include="ProducerConsumerBoostCoroutine.h">
+      <Filter>Header Files\ProducerConsumer</Filter>
+    </ClInclude>
+    <ClInclude Include="ContextSwitchCoroutinesTS.h">
+      <Filter>Header Files\ContextSwitch</Filter>
+    </ClInclude>
+    <ClInclude Include="ProducerConsumerCoroutinesTS.h">
+      <Filter>Header Files\ProducerConsumer</Filter>
+    </ClInclude>
+    <ClInclude Include="ContextSwitchThreads.h">
+      <Filter>Header Files\ContextSwitch</Filter>
+    </ClInclude>
+    <ClInclude Include="ProducerConsumerThreads.h">
+      <Filter>Header Files\ProducerConsumer</Filter>
+    </ClInclude>
+    <ClInclude Include="MergesortFibers.h">
+      <Filter>Header Files\Mergesort</Filter>
+    </ClInclude>
+    <ClInclude Include="MergesortFileWriter.h">
+      <Filter>Header Files\Mergesort</Filter>
+    </ClInclude>
+    <ClInclude Include="MergesortFileReader.h">
+      <Filter>Header Files\Mergesort</Filter>
+    </ClInclude>
+    <ClInclude Include="MergesortHelper.h">
+      <Filter>Header Files\Mergesort</Filter>
+    </ClInclude>
+    <ClInclude Include="MergesortBoostCoroutines.h">
+      <Filter>Header Files\Mergesort</Filter>
+    </ClInclude>
+    <ClInclude Include="MergesortThreads.h">
+      <Filter>Header Files\Mergesort</Filter>
+    </ClInclude>
+    <ClInclude Include="BoostCoroutineHelper.h">
+      <Filter>Header Files\HelperFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="CoroutineTSHelper.h">
+      <Filter>Header Files\HelperFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="MergesortCoroutinesTS.h">
+      <Filter>Header Files\Mergesort</Filter>
+    </ClInclude>
+    <ClInclude Include="MergesortTest.h">
+      <Filter>Header Files\Mergesort</Filter>
+    </ClInclude>
+    <ClInclude Include="MergesortParameters.h">
+      <Filter>Header Files\Mergesort</Filter>
+    </ClInclude>
+    <ClInclude Include="MergesortFunctions.h">
+      <Filter>Header Files\Mergesort</Filter>
+    </ClInclude>
+    <ClInclude Include="ContextSwitchParameters.h">
+      <Filter>Header Files\ContextSwitch</Filter>
+    </ClInclude>
+    <ClInclude Include="ContextSwitchTest.h">
+      <Filter>Header Files\ContextSwitch</Filter>
+    </ClInclude>
+    <ClInclude Include="ProducerConsumerTest.h">
+      <Filter>Header Files\ProducerConsumer</Filter>
+    </ClInclude>
+    <ClInclude Include="ProducerConsumerParameters.h">
+      <Filter>Header Files\ProducerConsumer</Filter>
+    </ClInclude>
+    <ClInclude Include="ProducerConsumerBaseTest.h">
+      <Filter>Header Files\ProducerConsumer</Filter>
+    </ClInclude>
+    <ClInclude Include="MergesortBaseTest.h">
+      <Filter>Header Files\Mergesort</Filter>
+    </ClInclude>
+    <ClInclude Include="ContextSwitchBaseTest.h">
+      <Filter>Header Files\ContextSwitch</Filter>
+    </ClInclude>
+    <ClInclude Include="GlobalTestParameters.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CoroutineHandler.h">
+      <Filter>Header Files\HelperFunctions</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
